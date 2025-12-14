@@ -1816,43 +1816,6 @@ Search                         LOGO                    Login Subscribe
     display: none;
 }
 
-/* 12.4. Recent posts */
-
-.gh-recent-posts {
-    margin-bottom: var(--grid-gap);
-    padding-bottom: var(--grid-gap);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.gh-recent-title {
-    grid-column: 1 / -1;
-    margin-bottom: calc(var(--grid-gap) / 2);
-    padding-bottom: 12px;
-    font-size: 1.2rem;
-    font-weight: 550;
-    letter-spacing: 0.025em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.gh-recent-feed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
-    gap: var(--grid-gap);
-}
-
-@media (max-width: 767px) {
-    .gh-recent-feed {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .gh-recent-feed {
-        display: flex;
-        flex-direction: column;
-    }
-}
 
 /* 13. Sidebar
 /* ---------------------------------------------------------- */
@@ -2106,8 +2069,8 @@ Search                         LOGO                    Login Subscribe
 }
 
 .gh-article-image img {
-    width: 100%;
-    max-width: 714px;
+    width: auto;
+    max-height: 500px;
     margin-left: auto;
     margin-right: auto;
 }
