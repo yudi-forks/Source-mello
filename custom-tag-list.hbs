@@ -1,0 +1,33 @@
+{{!< default}}
+
+{{#post}}
+
+
+<main class="gh-main">
+      <article class="gh-article {{post_class}}">
+                <header class="gh-article-header gh-canvas">
+        <h1 class="gh-article-title is-title">Tags</h1>
+    </header>
+
+     <section class="gh-content gh-canvas is-body">
+      {{#get "tags" limit="all" include="count.posts" order="name asc"}}
+        {{#if tags}}
+          <ul class="tag-list">
+            {{#foreach tags}}
+              <li class="tag-list__item">
+                <a class="tag-list__link" href="{{url}}">
+                  {{name}} <small class="tag-count">({{count.posts}})</small>
+                </a>
+              </li>
+            {{/foreach}}
+          </ul>
+        {{else}}
+          <p>No tags found.</p>
+        {{/if}}
+      {{/get}}
+    </section>
+  </article>
+</main>
+
+{{/post}}
+
